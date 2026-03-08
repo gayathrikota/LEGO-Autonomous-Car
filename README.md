@@ -1,4 +1,4 @@
-# 🚗 Project Spyn — LEGO Autonomous Wheelchair-Accessible Car
+# Project Spyn — LEGO Autonomous Wheelchair-Accessible Car
 ### MATLAB · LEGO Mindstorms EV3 · Ultrasonic Sensors · Color Sensor · Robotics | ASU FSE 100
 
 > **Objective:** Design and program a LEGO Mindstorms EV3 vehicle that can autonomously navigate an obstacle course while also supporting individuals with mobility impairments through a motorized wheelchair ramp and wireless keyboard control.
@@ -17,13 +17,13 @@
 
 ---
 
-## 🎬 Demo Video
+## Demo Video
 
 ▶️ **[Watch the full car demonstration on YouTube](https://youtu.be/BWAP3AxwybM)**
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Project Spyn is an autonomous LEGO EV3 vehicle built for **FSE 100 — Introduction to Engineering** at Arizona State University. The car was designed with accessibility in mind — it features a **motorized sliding wheelchair ramp** and can be operated both autonomously and via **wireless keyboard control**.
 
@@ -31,7 +31,7 @@ The system uses real-time sensor data to switch between three operating modes au
 
 ---
 
-## 🤖 How It Works — Three Operating Modes
+## How It Works — Three Operating Modes
 
 The car reads its **color sensor** every 0.1 seconds and switches modes based on what color it detects on the ground:
 
@@ -61,7 +61,7 @@ The car reads its **color sensor** every 0.1 seconds and switches modes based on
 
 ---
 
-## 🧠 Autonomous Mode — Navigation Logic
+## Autonomous Mode — Navigation Logic
 
 When **black** is detected, the car uses **two sensors together** to decide how to move:
 
@@ -72,7 +72,7 @@ Touch Sensor (Port 1) → is the FRONT blocked? (1=yes, 0=no)
 
 | Scenario | Distance | Touch | Action |
 |----------|----------|-------|--------|
-| Clear ahead, aligned with wall | ≤ 65 cm | Not pressed | ✅ Drive straight forward |
+| Clear ahead, aligned with wall | ≤ 65 cm | Not pressed | Drive straight forward |
 | Front blocked, aligned | ≤ 65 cm | Pressed | ⬅️ Back up → Turn RIGHT 90° |
 | Front blocked, not aligned | > 65 cm | Pressed | ⬅️ Back up → Turn LEFT 90° → Move forward |
 | Path open, not aligned | > 65 cm | Not pressed | ↩️ Turn LEFT → Move forward to re-align |
@@ -106,7 +106,7 @@ When **red** is detected, the car:
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 project-spyn/
@@ -129,7 +129,7 @@ project-spyn/
 
 ---
 
-## 💡 Key Engineering Decisions
+## Key Engineering Decisions
 
 **Why color-based mode switching?**  
 Using colored tape on the ground is a simple, reliable way to define zones — no complex path-planning needed. Black = autonomous zone, colored = manual zone, red = stop zone.
