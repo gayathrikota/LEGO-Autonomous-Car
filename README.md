@@ -13,7 +13,7 @@
 | Rakshith Reddy Mudigolam |
 | Mukesh Tulluru |
 | Naga Sathvik Kommareddy |
-| Mrudula Eluri |
+
 
 ---
 
